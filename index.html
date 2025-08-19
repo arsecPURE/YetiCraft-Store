@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YetiCraft Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-400">YetiCraft Store</h1>
+      <div class="space-x-6">
+        <a href="#ranks" class="hover:text-blue-400">Ranks</a>
+        <a href="#kits" class="hover:text-blue-400">Kits</a>
+        <a href="#particles" class="hover:text-blue-400">Particles</a>
+        <a href="#custom-items" class="hover:text-blue-400">Custom Items</a>
+        <a href="#payment" class="hover:text-green-400">Payment</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ranks Section -->
+  <section id="ranks" class="py-12 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Ranks</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Mukhiya Rank</h3>
+        <p class="text-lg">Rs. 180</p>
+        <button onclick="scrollToPayment('Mukhiya Rank', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-blue-500 rounded hover:bg-blue-600">Buy Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Subba Rank</h3>
+        <p class="text-lg">Rs. 250</p>
+        <button onclick="scrollToPayment('Subba Rank', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-blue-500 rounded hover:bg-blue-600">Buy Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Hakim Rank</h3>
+        <p class="text-lg">Rs. 440</p>
+        <button onclick="scrollToPayment('Hakim Rank', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-blue-500 rounded hover:bg-blue-600">Buy Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Kaji Rank</h3>
+        <p class="text-lg">Rs. 580</p>
+        <button onclick="scrollToPayment('Kaji Rank', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-blue-500 rounded hover:bg-blue-600">Buy Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Maharaja Rank</h3>
+        <p class="text-lg">Rs. 650</p>
+        <button onclick="scrollToPayment('Maharaja Rank', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-blue-500 rounded hover:bg-blue-600">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kits Section -->
+  <section id="kits" class="py-12 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Kits</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Mukhiya Kit</h3>
+        <p class="text-lg">Rs. 70</p>
+        <button onclick="scrollToPayment('Mukhiya Kit', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-green-500 rounded hover:bg-green-600">Buy Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Subba Kit</h3>
+        <p class="text-lg">Rs. 110</p>
+        <button onclick="scrollToPayment('Subba Kit', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-green-500 rounded hover:bg-green-600">Buy Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Hakim Kit</h3>
+        <p class="text-lg">Rs. 160</p>
+        <button onclick="scrollToPayment('Hakim Kit', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-green-500 rounded hover:bg-green-600">Buy Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Kaji Kit</h3>
+        <p class="text-lg">Rs. 200</p>
+        <button onclick="scrollToPayment('Kaji Kit', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-green-500 rounded hover:bg-green-600">Buy Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold">Maharaja Kit</h3>
+        <p class="text-lg">Rs. 230</p>
+        <button onclick="scrollToPayment('Maharaja Kit', 'esewa.jpg')" class="mt-4 px-4 py-2 bg-green-500 rounded hover:bg-green-600">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+<!-- Purchase Buttons -->
+<div class="flex flex-col items-center mt-6 space-y-4">
+  <!-- Mobile App Payment -->
+  <a href="esewa://pay" 
+     class="px-6 py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition w-full text-center md:w-auto">
+    Pay with eSewa App
+  </a>
+
+  <!-- PC Web Payment -->
+  <a href="https://esewa.com.np/#/home"
+     target="_blank"
+     class="px-6 py-3 bg-green-500 text-white font-semibold rounded hover:bg-green-600 transition w-full text-center md:w-auto">
+    Pay with eSewa Website
+  </a>
+
+  <!-- QR Code Section -->
+  <div class="mt-6 text-center">
+    <h3 class="text-xl font-semibold text-yellow-400 mb-2">Scan QR to Pay</h3>
+    <img id="payment-qr" src="esewa.jpg" alt="eSewa QR Code" class="mx-auto w-64 h-64 rounded-lg shadow-lg border-2 border-green-500">
+
+    <p class="mt-4 text-red-400 font-bold">
+      ⚠ Please enter your <span class="text-yellow-300">Minecraft Username</span> and 
+      <span class="text-yellow-300">Ordered Item</span> in the payment remarks.
+    </p>
+  </div>
+</div>
+
+
+
+</section>
+
+
+  <script>
+    function scrollToPayment(itemName, qrSrc) {
+      // Scroll smoothly to payment section
+      document.getElementById('payment').scrollIntoView({ behavior: 'smooth' });
+      
+      // Focus the username input
+      document.getElementById('username').focus();
+      
+      // Update QR code image
+      document.getElementById('payment-qr').src = qrSrc;
+      
+      // Update item name above QR code
+      document.getElementById('payment-item').textContent = `Scan QR Code to Pay for ${itemName}`;
+    }
+  </script>
+</body>
+</html>
